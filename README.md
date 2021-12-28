@@ -20,9 +20,9 @@ Clone or fork this repo and edit `_config.yml` as needed.
 Most of the configurations can be found in `_config.yml`. The configurations listed below are specific to MatJek. If you are not using `google_tracking_id` or `disqus_shortname`, just remove them completely.
 
 ```yaml
-github_profile: "github_profile_url"
-user: "your_name" # Appears at sidebar
-user_email: "your_email" # Appears at sidebar, remove whole variable if unwanted
+github_profile: "https://github.com/yunniya097"
+user: "yunniya" # Appears at sidebar
+user_email: "tpdbs0907@hanyang.ac.kr" # Appears at sidebar, remove whole variable if unwanted
 contact_url: "google_form_link"
 google_tracking_id: "google_analytics_ID"
 disqus_shortname: "shortname_given_by_Disqus"
