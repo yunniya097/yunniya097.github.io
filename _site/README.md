@@ -21,7 +21,7 @@ Most of the configurations can be found in `_config.yml`. The configurations lis
 
 ```yaml
 github_profile: "https://github.com/yunniya097"
-user: "Yunniya" # Appears at sidebar
+user: "yunniya" # Appears at sidebar
 user_email: "tpdbs0907@hanyang.ac.kr" # Appears at sidebar, remove whole variable if unwanted
 contact_url: "google_form_link"
 google_tracking_id: "google_analytics_ID"
@@ -51,7 +51,7 @@ Bug reports and pull requests are welcomed on GitHub at https://github.com/shawn
 
 To set up your environment to develop this theme, clone/fork the repo and run `bundle install`.
 
-To test your theme, run `bundle exec jekyll serve` and open your browser at `http://localhost:4000/yunniya/`. This starts a Jekyll server using your theme. Add pages, documents, data, etc. like normal to test your theme's contents. As you make modifications to your theme and to your content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.
+To test your theme, run `bundle exec jekyll serve` and open your browser at `http://localhost:4000/matjek/`. This starts a Jekyll server using your theme. Add pages, documents, data, etc. like normal to test your theme's contents. As you make modifications to your theme and to your content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.
 
 ## License
 
