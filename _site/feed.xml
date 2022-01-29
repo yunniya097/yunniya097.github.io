@@ -1,4 +1,829 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-01-24T23:25:58+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Yunni-Coding</title><subtitle></subtitle><entry><title type="html">메타버스 1주차</title><link href="http://localhost:4000/2021/01/24/metaverse-1%EC%A3%BC%EC%B0%A8" rel="alternate" type="text/html" title="메타버스 1주차" /><published>2021-01-24T00:00:13+09:00</published><updated>2021-01-24T00:00:13+09:00</updated><id>http://localhost:4000/2021/01/24/metaverse-1%EC%A3%BC%EC%B0%A8</id><content type="html" xml:base="http://localhost:4000/2021/01/24/metaverse-1%EC%A3%BC%EC%B0%A8"></content><author><name></name></author><category term="metaverse" /><category term="study" /><summary type="html"></summary></entry><entry><title type="html">This is Just Another Post</title><link href="http://localhost:4000/2017/03/25/another-post" rel="alternate" type="text/html" title="This is Just Another Post" /><published>2017-03-25T02:30:13+09:00</published><updated>2017-03-25T02:30:13+09:00</updated><id>http://localhost:4000/2017/03/25/another-post</id><content type="html" xml:base="http://localhost:4000/2017/03/25/another-post">&lt;p&gt;I have some text.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-01-29T18:45:56+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Yunni-Coding</title><subtitle></subtitle><entry><title type="html">경진대회 평가지표</title><link href="http://localhost:4000/2021/05/18/%EA%B2%BD%EC%A7%84%EB%8C%80%ED%9A%8C-%ED%8F%89%EA%B0%80%EC%A7%80%ED%91%9C" rel="alternate" type="text/html" title="경진대회 평가지표" /><published>2021-05-18T04:51:13+09:00</published><updated>2021-05-18T04:51:13+09:00</updated><id>http://localhost:4000/2021/05/18/%EA%B2%BD%EC%A7%84%EB%8C%80%ED%9A%8C-%ED%8F%89%EA%B0%80%EC%A7%80%ED%91%9C</id><content type="html" xml:base="http://localhost:4000/2021/05/18/%EA%B2%BD%EC%A7%84%EB%8C%80%ED%9A%8C-%ED%8F%89%EA%B0%80%EC%A7%80%ED%91%9C">&lt;p&gt;&lt;em&gt;// 아래 내용은 [데이터가 뛰어노는 AI 놀이터, 캐글]으로 학습한 내용을 정리하였다.&lt;/em&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;경진-대회의-종류&quot;&gt;&lt;strong&gt;경진 대회의 종류&lt;/strong&gt;&lt;/h4&gt;
+
+&lt;p&gt;&lt;strong&gt;1) 회귀(Regression) 문제&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;수치를 예측하는 문제로, 평가 지표로는 RMSE, MAE 등이 있다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2_1) 이진 분류(Binary classification) 문제&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;데이터가 어떤 속성에 속하는지를 예측하는 문제로, ①0 또는 1의 레이블로 예측하는 경우와 ②0에서 1 사이의 확률로 예측하는 경우로 나뉜다. ①의 평가지표로는 F1-score를, ②는 로그 손실이나 AUC 등을 사용한다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2_2) 다중 클래스 분류 문제&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;다중 클래스 분류&lt;/strong&gt;(multi-class classification): 행 데이터(record)가 여러 클래스 중 어느 하나의 선택지에 속하는 분류 문제&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;다중 레이블 분류&lt;/strong&gt;(multi-label classification): 행 데이터가 동시에 여러 클래스에 속하는 분류 문제&lt;/p&gt;
+
+&lt;p&gt;이진 분류와 마찬가지로 ①데이터가 포함되었다고 예측되는 클래스의 레이블을 제출하는 경우와 ②데이터가 각 클래스에 포함될 확률을 0에서 1 사이의 수치로 제출하는 경우로 나뉜다.&lt;/p&gt;
+
+&lt;p&gt;다중 레이블 분류의 기본적인 솔루션은 이진 분류를 클래스 수만큼 반복하며, 평가지표로는 다중 클래스 분류일 때 다중 클래스 로그 손실, 다중 레이블 분류일 때 mean-F1 또는 macro-F1 등을 사용한다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;3) 추천 문제&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;추천&lt;/strong&gt;(Recommendation): 고객의 구매가 기대되는 상품과 반응이 있을 법한 광고 등을 예측하는 문제&lt;/p&gt;
+
+&lt;p&gt;구매 가능성에 따라 ①순위를 매겨 예측 결과를 제출하는 경우와 ②순위를 매기지 않고 제출하는 경우로 나뉜다. ①은 하나의 행 데이터에 여러개의 정답이 있고, ②는 여러 개의 예측값을 제출한다.&lt;/p&gt;
+
+&lt;p&gt;평가 지표로는 순위를 매길 땐 MAP@K2, 순위를 매기지 않을 땐 mean-F1, macro-F1을 사용한다. &lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;4) 그 외 문제들&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;① &lt;strong&gt;객체 탐지&lt;/strong&gt;(object detection): 이미지에 포함된 물체의 클래스와 해당 물체가 존재하는 직사각형 경계 박스 영역을 추정하는 문제&lt;/p&gt;
+
+&lt;p&gt;② &lt;strong&gt;세분화&lt;/strong&gt;(segmentation): 이미지에 포함된 물체의 영역을 이미지 픽셀 단위로 추정하는 문제&lt;/p&gt;
+
+&lt;h4 id=&quot;경진-대회의-데이터셋&quot;&gt;&lt;strong&gt;경진 대회의 데이터셋&lt;/strong&gt;&lt;/h4&gt;
+
+&lt;p&gt;&lt;strong&gt;1) 정형 데이터&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;정형 데이터&lt;/strong&gt;(tabular data): 엑셀 등의 스프레드시트 처럼 행과 열이 있는 형식의 데이터&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;정형 데이터를 다루는 대회에서 제공되는 가장 간단한 데이터 파일 세 가지의 사용&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;train.csv&lt;/strong&gt;를 이용하여 모델 학습&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;test.csv&lt;/strong&gt;에 대한 예측 (*test.csv는 예측하고자 하는 목적변수가 없다)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;sample_submission.csv&lt;/strong&gt; 형식으로 제출 파일 작성 &lt;/p&gt;
+
+&lt;p&gt;여러 개의 정형 데이터가 주어지는 경우도 있으며, 데이터 결합과 처리는 그 진행 방법에 따라 행이나 열의 수가 매우 많아질 수 있기에 연산량이나 메모리 등에 주의해야 한다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2) 외부 데이터&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;경진 대회마다 규칙은 다르며, 캐글의 경우는 외부 데이터 사용이 허용되지 않는 경우가 많아 대회에서 제공하는 데이터만 가지고 학습과 예측을 수행해야 한다. 외부 데이터가 허용되는 대회에서는 사용한 외부 데이터의 내용을 Discussion에 공유해야하는 규칙이 있는 경우가 많다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;3) 시계열 데이터&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;시간의 흐름과 함께 관측된 데이터를 말한다.&lt;/p&gt;
+
+&lt;h4 id=&quot;평가지표&quot;&gt;&lt;strong&gt;평가지표&lt;/strong&gt;&lt;/h4&gt;
+
+&lt;p&gt;&lt;strong&gt;평가지표&lt;/strong&gt;: 학습시킨 모델의 성능이나 그 예측 결과의 좋고 나쁨을 측정하는 지표&lt;/p&gt;
+
+&lt;p&gt;경진 대회에서 각 대회마다 정해진 평가지표로 점수가 산출 되고 순위가 결정 된다.&lt;/p&gt;
+
+&lt;p&gt;더보기&lt;/p&gt;
+
+&lt;p&gt;N: 행 데이터의 수 / i: 1, 2, …, N; 각 행 데이터의 인덱스 / yi: i번째 행 데이터의 실젯값 /yi^: i번째 행 데이터의 예측값&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;1) 회귀의 평가지표&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;① RMSE(Root Mean Square Error, 제곱근평균오차)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;회귀 문제에서 가장 대표적인 평가지표로, 각 행 데이터의 예측값과 실젯값의 차이를 제곱하고 그 값의 평균을 내 제곱근을 구한다.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;[##_Image&lt;/td&gt;
+      &lt;td&gt;kage@b8cWpG/btq4YsMBwus/l6B8oRw2gTk9gtLbW5kvq1/img.png&lt;/td&gt;
+      &lt;td&gt;CDM&lt;/td&gt;
+      &lt;td&gt;1.3&lt;/td&gt;
+      &lt;td&gt;{“originWidth”:3999,”originHeight”:984,”style”:”alignLeft”,”width”:236,”height”:58}_##]&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;사이킷런 metrics 모듈의 &lt;strong&gt;mean_squared_error 함수&lt;/strong&gt;를 이용해 계산이 가능하다.&lt;/p&gt;
+
+&lt;p&gt;(mean_squared_error: 매개변수 squared가 True -&amp;gt; MSE, False -&amp;gt; RMSE를 계산할 수 있다)&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# RMSE
+from sklearn.metrics import mean_squared_error
+
+# y_true: 실젯값, y_pred: 예측값
+y_true = [1.0, 1.5, 2.0, 1.2, 1.8]
+y_pred = [0.8, 1.5, 1.8, 1.3, 3.0]
+
+rmse = np.sqrt(mean_squared_error(y_ture, y_pred))
+print(rmse)
+
+# 0.5532
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;여기서 중요 Point!&lt;/p&gt;
+
+&lt;p&gt;-  RMSE 값을 최소화했을 때 결과가 최대가능도방법과 같아지는 등 통계학적으로도 큰 의미를 가지는 평가지표이다.&lt;/p&gt;
+
+&lt;p&gt;(* &lt;strong&gt;최대가능도방법&lt;/strong&gt;(maximum likelihood method): 오차가 정규분포를 따른다는 전제하에 구할 수 있다)&lt;/p&gt;
+
+&lt;p&gt;- &lt;strong&gt;평균값&lt;/strong&gt;(average value): 하나의 대푯값으로 예측을 실시한다고 가정했을 때, RMSE를 최소화하는 예측값&lt;/p&gt;
+
+&lt;p&gt;- 이상치(outlier)의 영향을 받기 쉽기에, 이상치를 제외한 처리 등을 미리 해둬야 이상치에 과적합한 모델을 생성하지 않는다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;② RMSLE(Root Mean Square Logarithmic Error)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;실젯값과 예측값의 로그를 각각 취한 후, 그 차의 제곱평균제곱근으로 계산되는 지표이다.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;[##_Image&lt;/td&gt;
+      &lt;td&gt;kage@cjGdbF/btq4YKzXSPz/SCwkM8n6o7xtkK5xzzSCiK/img.png&lt;/td&gt;
+      &lt;td&gt;CDM&lt;/td&gt;
+      &lt;td&gt;1.3&lt;/td&gt;
+      &lt;td&gt;{“originWidth”:4000,”originHeight”:709,”style”:”alignLeft”,”width”:376,”height”:67}_##]&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;사이킷런 metrics 모듈의 &lt;strong&gt;mean_squared_log_error 함수&lt;/strong&gt;를 이용해 계산이 가능하다.&lt;/p&gt;
+
+&lt;p&gt;여기서 중요 Point!&lt;/p&gt;
+
+&lt;p&gt;- 예측할 대상인 목적변수를 정하고, 이 변수 값에 로그를 취한 값을 새로운 목적변수로 삼는다. 이에 대한 &lt;strong&gt;RMSE를 최소화하면 RMSLE가 최소화&lt;/strong&gt;된다.&lt;/p&gt;
+
+&lt;p&gt;- 목적변수의 분포가 한쪽으로 치우치면 큰 값의 영향력이 일반적인 RMSE보다 강해져 이를 방지하려고 사용하거나, 실젯값과 예측값의 비율을 측정 지표로 사용하고 싶을 때 사용한다.&lt;/p&gt;
+
+&lt;p&gt;- 로그를 취할 때는 실젯값이 0일 때 그 값이 음으로 무한대 오류가 발생하기에 보통 1을 더하고 나서 log를 취한다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;③ MAE(Mean Absolute Error, 평균절대오차)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;실젯값과 예측값의 차에 대한 절댓값의 평균으로 계산되는 지표이다.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;[##_Image&lt;/td&gt;
+      &lt;td&gt;kage@dIRXkf/btq4ZRFpxxb/qUn3qNXac25MHXaKtOYmV1/img.png&lt;/td&gt;
+      &lt;td&gt;CDM&lt;/td&gt;
+      &lt;td&gt;1.3&lt;/td&gt;
+      &lt;td&gt;{“originWidth”:4000,”originHeight”:777,”style”:”alignLeft”,”width”:217,”height”:42}_##]&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;사이킷런 metrics 모듈의 &lt;strong&gt;mean_absolute_error 함수&lt;/strong&gt;를 이용해 계산이 가능하다.&lt;/p&gt;
+
+&lt;p&gt;여기서 중요 Point!&lt;/p&gt;
+
+&lt;p&gt;- MAE는 이상치의 영향을 상대적으로 줄여주는 평가에 적절한 함수이다.&lt;/p&gt;
+
+&lt;p&gt;- yi^에 대한 미분이 yi^=yi로 불연속적이거나, 2차 미분이 항상 0이 되는 다루기 어려운 성질이 있다.&lt;/p&gt;
+
+&lt;p&gt;- 하나의 대푯값으로 예측할 때 &lt;strong&gt;MAE를 최소화하는 예측값&lt;/strong&gt;은 &lt;strong&gt;중앙값&lt;/strong&gt;(median)이다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;④ 결정 계수(Coefficient of Determination, R^2)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;회귀분석(Regression Analysis)의 적합성을 나타낸다.&lt;/p&gt;
+
+&lt;p&gt;분모는 예측값에 의존하지 않고, 분자는 오차의 제곱에 관한 것이므로 &lt;strong&gt;이 지표의 최대화가 곧 RMSE의 최소화와 같다&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;[##_Image&lt;/td&gt;
+      &lt;td&gt;kage@mg7zs/btq40Q0hr20/dtDPSOFuWTRqdZCkDKnSRK/img.png&lt;/td&gt;
+      &lt;td&gt;CDM&lt;/td&gt;
+      &lt;td&gt;1.3&lt;/td&gt;
+      &lt;td&gt;{“originWidth”:3999,”originHeight”:640,”style”:”alignLeft”,”width”:349}_##]&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;결정 계수의 최댓값은 1이기에, 1에 가까워질 수록 모델 성능이 높은 예측으로 볼 수 있다.&lt;/p&gt;
+
+&lt;p&gt;사이킷런 metrics 모듈의 &lt;strong&gt;r2_score 함수&lt;/strong&gt;를 이용해 계산이 가능하다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2) 이진 분류의 평가지표&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;이진 분류의 평가지표는 각 행 데이터가 양성인지 음성인지를 예측값으로 삼아 평가하는 지표인가 각 행 데이터가 양성일 확률을 예측값으로 삼아 평가하는 지표인가 두 가지로 나눌 수 있다. &lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;양성인지 음성인지를 예측값으로 사용할 때&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;**①&lt;/strong&gt;혼동행렬(confusion matrix, 오차행렬)**&lt;/p&gt;
+
+&lt;p&gt;모델의 성능을 평가할 때 주로 사용하는 지표로, 평가지표는 아니나 양성인지 음성인지를 예측값으로 하는 평가지표에 자주 활용된다.&lt;/p&gt;
+
+&lt;p&gt;예측값과 실젯값의 조합은 예측값이 양성인지 음성인지, 예측이 올바른지 틀린지에 따라 아래와 같이 나뉜다.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;[##_Image&lt;/td&gt;
+      &lt;td&gt;kage@c0tVQv/btq41mrDLTE/1bbT8XGNPgJKznxd79eKPk/img.png&lt;/td&gt;
+      &lt;td&gt;CDM&lt;/td&gt;
+      &lt;td&gt;1.3&lt;/td&gt;
+      &lt;td&gt;{“originWidth”:787,”originHeight”:632,”style”:”floatLeft”,”width”:310,”filename”:”blob”}_##]&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;strong&gt;TP&lt;/strong&gt;(True Positive): 실젯값이 양성인데, 예측값도 양성&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;TN&lt;/strong&gt;(True Negative): 실젯값이 음성인데, 예측값도 음성&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;FP&lt;/strong&gt;(False Positive): 실젯값이 음성인데, 예측값은 양성&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;FN&lt;/strong&gt;(False Negative): 실젯값이 양성인데, 예측값은 음성&lt;/p&gt;
+
+&lt;p&gt;혼동행렬은 아래와 같이 구현할 수 있다.&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# 혼동행렬
+from sklearn.metrics import confusion_matrix
+
+# 0, 1로 표현되는 이진 분류의 실젯값과 예측값
+y_true = [1, 0, 1, 1, 0, 1, 1, 0]
+y_pred = [0, 0, 1, 1, 0, 0, 1, 1]
+
+tp = np.sum((np.array(y_true) == 1) &amp;amp; (np.array(y_pred) == 1))
+tn = np.sum((np.array(y_true) == 0) &amp;amp; (np.array(y_pred) == 0))
+fp = np.sum((np.array(y_true) == 0) &amp;amp; (np.array(y_pred) == 1))
+fn = np.sum((np.array(y_ture) == 1) &amp;amp; (np.array(y_pred) == 0))
+
+confusion_matrux1 = np.array([[tp, fp], [fn, tn]])
+print(confusion_matrix1)
+# array([[3, 1], [2, 2]])
+
+# 사이킷런의 metrics 모듈의 confusion_matrix로도 구현 가능하지만,
+# 혼동행렬의 요소 배치가 다르기 때문에 주의가 필요하다
+confusion_matrix2 = confusion_matrix(y_true, y_pred)
+print(confusion_matrix2)
+# array([[2, 1], [2, 3]])
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;**②&lt;/strong&gt; 정확도(accuracy) &amp;amp; 오류율(error rate)**&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;정확도&lt;/strong&gt;: 예측이 정확한 비율&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;[##_Image&lt;/td&gt;
+      &lt;td&gt;kage@by5vGk/btq434qtKTt/L2PvURKNeWANgWKdmkMWd0/img.png&lt;/td&gt;
+      &lt;td&gt;CDM&lt;/td&gt;
+      &lt;td&gt;1.3&lt;/td&gt;
+      &lt;td&gt;{“originWidth”:4000,”originHeight”:769,”style”:”alignLeft”,”width”:321,”height”:62}_##]&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;strong&gt;오류율&lt;/strong&gt;: 예측이 잘못된 비율&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;[##_Image&lt;/td&gt;
+      &lt;td&gt;kage@zrTop/btq41kHkHIe/4jd83LJ79pABflKaGst4MK/img.png&lt;/td&gt;
+      &lt;td&gt;CDM&lt;/td&gt;
+      &lt;td&gt;1.3&lt;/td&gt;
+      &lt;td&gt;{“originWidth”:4000,”originHeight”:444,”style”:”alignLeft”,”width”:326}_##]&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;정확하게 예측한 행 데이터 수를 전체 행 데이터 수로 나눠 구할 수 있는, 직관적으로 이해하기 쉬운 평가지표지만, 불균형한 데이터의 경우 모델의 성능을 평가하기 어렵다.&lt;/p&gt;
+
+&lt;p&gt;사이킷런 metrics 모듈의 &lt;strong&gt;accuracy_score 함수&lt;/strong&gt;를 이용해 계산이 가능하다.&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# 정확도(accuracy)
+
+from sklearn.metrics import accuracy_score
+
+# 0, 1로 표현되는 이진 분류의 실젯값과 예측값
+y_true = [1, 0, 1, 1, 0, 1, 1, 0]
+y_pred = [0, 0, 1, 1, 0, 0, 1, 1]
+accuracy = accuracy_score(y_true, y_pred)
+print(accuracy)
+# 0.625
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;**③&lt;/strong&gt; 정밀도(precision)  &amp;amp; 재현율(recall)**&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;정밀도&lt;/strong&gt;: 양성으로 예측한 값 중에 실젯값도 양성일 비율&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;[##_Image&lt;/td&gt;
+      &lt;td&gt;kage@v5TPr/btq40PUBAtX/tNRm9yShwmwnGSOic0pLb0/img.png&lt;/td&gt;
+      &lt;td&gt;CDM&lt;/td&gt;
+      &lt;td&gt;1.3&lt;/td&gt;
+      &lt;td&gt;{“originWidth”:4000,”originHeight”:982,”style”:”alignLeft”,”width”:261,”height”:64}_##]&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;strong&gt;재현율&lt;/strong&gt;: 실젯값이 양성인 것 중에 예측값이 양성일 비율&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;[##_Image&lt;/td&gt;
+      &lt;td&gt;kage@bbHcPz/btq4ZgdPXLt/HApq4F34WBKrtO7Dskvb90/img.png&lt;/td&gt;
+      &lt;td&gt;CDM&lt;/td&gt;
+      &lt;td&gt;1.3&lt;/td&gt;
+      &lt;td&gt;{“originWidth”:3674,”originHeight”:999,”style”:”alignLeft”,”width”:243,”height”:66}_##]&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;각각 값의 범위(scale)는 0 부터 1 사이이며 &lt;strong&gt;1에 가까워질수록 좋은 점수&lt;/strong&gt;이다. &lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;정밀도와 재현율은&lt;/strong&gt; 어느 한 쪽의 값을 높이려 할 때 다른 쪽의 값은 낮아지는 &lt;strong&gt;trade off 관계&lt;/strong&gt;이기에, 둘 중 하나만 경진 대회의 지표로 삼는 일은 없다. 잘못된 예측을 줄이고 싶으면 정밀도를, 올바른 예측을 하고 싶다면 재현율을 중시하면 된다.&lt;/p&gt;
+
+&lt;p&gt;사이킷런 metrics 모듈의 &lt;strong&gt;precision_score 함수와 recall_score 함수&lt;/strong&gt;를 이용해 계산이 가능하다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;**④&lt;/strong&gt; F1-score &amp;amp; F_β_-score**&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;F1-score&lt;/strong&gt;: 정밀도와 재현율의 조화 평균으로 계산되며, 정밀도아 재현율의 균형을 이루는 지표, F 점수라고도 함&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;[##_Image&lt;/td&gt;
+      &lt;td&gt;kage@ATgiW/btq4ZQ7zK5s/HLV6Wl5JFmyvNQkvZqEuE1/img.png&lt;/td&gt;
+      &lt;td&gt;CDM&lt;/td&gt;
+      &lt;td&gt;1.3&lt;/td&gt;
+      &lt;td&gt;{“originWidth”:4000,”originHeight”:506,”style”:”alignLeft”,”width”:458,”height”:58}_##]&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;분자에 TP 값만 포함되는 것에서 알 수 있듯, 양성과 음성을 대칭으로 취급하지 않으므로, 실젯값과 예측값의 양성과 음성을 함께 바꾸면 F1-score나 그 행동이 바뀐다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;F_β_-score&lt;/strong&gt;: F1-score에서 구한 조화 평균에서 계수 _β_에 따라 재현율에 가중치를 줘 조정한 지표&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;[##_Image&lt;/td&gt;
+      &lt;td&gt;kage@oZFSL/btq47Tn8wUv/bfc5e1xQM1R4W66qwb16p0/img.png&lt;/td&gt;
+      &lt;td&gt;CDM&lt;/td&gt;
+      &lt;td&gt;1.3&lt;/td&gt;
+      &lt;td&gt;{“originWidth”:4000,”originHeight”:670,”style”:”alignLeft”,”width”:382,”height”:64}_##]&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;각각 사이킷런 metrics 모듈의 &lt;strong&gt;f1_score 함수와 fbeta_score 함수&lt;/strong&gt;를 이용해 계산이 가능하다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;⑤ 매튜상관계수(MCC, Mathews Correlation Coefficient)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;사용 빈도는 높지 않지만 불균형한 데이터의 모델 성능을 적절히 평가하기 쉬운 지표로, &lt;strong&gt;-1 부터 +1 사이 범위의 값&lt;/strong&gt;을 가진다. &lt;/p&gt;
+
+&lt;p&gt;값이 &lt;strong&gt;+1일 때는 완벽한 예측&lt;/strong&gt; / &lt;strong&gt;0일 때는 랜덤한 예측&lt;/strong&gt; / &lt;strong&gt;-1일 때는 완전 반대 예측&lt;/strong&gt;을 한 것이다. 양성과 음성을 대칭으로 취급하기 때문에 실젯값과 예측값의 양성과 음성을 서로 바꿔도 점수는 동일하다.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;[##_Image&lt;/td&gt;
+      &lt;td&gt;kage@dEmXXq/btq453YUo6E/e6Um2YPNWue2ApLB0TlJ7K/img.png&lt;/td&gt;
+      &lt;td&gt;CDM&lt;/td&gt;
+      &lt;td&gt;1.3&lt;/td&gt;
+      &lt;td&gt;{“originWidth”:4000,”originHeight”:470,”style”:”alignLeft”,”width”:486,”height”:57}_##]&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;사이킷런 metrics 모듈의 &lt;strong&gt;matthews_corrcoef 함수&lt;/strong&gt;를 이용해 계산이 가능하다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;각 행 데이터가 양성일 확률을 예측할 때&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;**①&lt;/strong&gt; 로그 손실**&lt;/p&gt;
+
+&lt;p&gt;분류 문제의 대표적인 평가지표로, 교차 엔트로피(cross-entropy)라고도 부른다.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;[##_Image&lt;/td&gt;
+      &lt;td&gt;kage@b2U3Qd/btq4X7hFwXr/AAmmwMWLVxjDk81hUlSfe0/img.png&lt;/td&gt;
+      &lt;td&gt;CDM&lt;/td&gt;
+      &lt;td&gt;1.3&lt;/td&gt;
+      &lt;td&gt;{“originWidth”:4000,”originHeight”:931,”style”:”alignLeft”,”width”:392,”height”:91}_##]&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;로그 손실은 실젯값을 예측하는 확률에 로그를 취해 부호를 반전시킨 값으로, &lt;strong&gt;낮을 수록 좋은 지표&lt;/strong&gt;이다. 각 행 데이터가 양성일 확률을 낮게 예측했음에도 양성일 경우나, 양성일 확률을 높게 예측했음에도 음성일 경우에는 패널티가 크게 주어진다.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;[##_Image&lt;/td&gt;
+      &lt;td&gt;kage@do1vvC/btq5bWZA4QQ/eaNk3czQJIji3CYiVvMd00/img.png&lt;/td&gt;
+      &lt;td&gt;CDM&lt;/td&gt;
+      &lt;td&gt;1.3&lt;/td&gt;
+      &lt;td&gt;{“originWidth”:3500,”originHeight”:2374,”style”:”alignLeft”,”width”:403,”height”:273,”caption”:”출처: 데이터가 뛰어노는 AI 놀이터, 캐글”}_##]&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;예측 확률이 실제 레이블의 값과 같을 때 (pi=yi) 로그 손실 값인 Li는 최소가 되며, yi의 값이 1이 될 확률을 1로 정확히 예측할 때도 로그 손실의 값은 최소가 된다. 모델을 학습시킬 때 &lt;strong&gt;목적함수로 자주 사용&lt;/strong&gt;되며, 사이킷런에서 metrics 모듈의 &lt;strong&gt;log_loss 함수&lt;/strong&gt;로 계산이 가능하다.&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# logloss
+
+from sklearn.metrics import log_loss
+
+# 0, 1로 나타나는 이진 분류의 실젯값과 예측 확률
+y_true = [1, 0, 1, 1, 0, 1]
+y_prob = [0.1, 0.2, 0.8, 0.8, 0.1, 0.3]
+
+logloss = log_loss(y_true, y_prob)
+print(logloss)
+# 0.7136
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;**&lt;/strong&gt;②&lt;strong&gt;** AUC(Area Under the ROC Curve, ROC 곡선아래면적)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;AUC는 양성과 음성을 각각 랜덤 선택했을 때 양성 예측값이 음성 예측값보다 클 &lt;strong&gt;확률&lt;/strong&gt;로, ROC 곡선(Receiver Operating Characteristic curve)을 이용해 계산한다. ROC 곡선은 예측값을 양성으로 판단하는 임곗값을 1에서 0으로 움직일 때의 거짓 양성 비율과 참 양성 비율을 그래프의 (x, y) 축으로 나타낼 수 있으며, ROC 곡선의 하부 면적이 AUC이다.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;[##_Image&lt;/td&gt;
+      &lt;td&gt;kage@bkfsr3/btq5bOmXV4y/EgR8dJ5tLpTdH9yUzZmTD1/img.jpg&lt;/td&gt;
+      &lt;td&gt;CDM&lt;/td&gt;
+      &lt;td&gt;1.3&lt;/td&gt;
+      &lt;td&gt;{“originWidth”:3500,”originHeight”:2664,”style”:”alignLeft”,”width”:389,”height”:297,”caption”:”출처: 데이터가 뛰어노는 AI 놀이터, 캐글”,”filename”:”KakaoTalk_20210518&lt;em&gt;010027293.jpg”}&lt;/em&gt;##]&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;strong&gt;거짓 양성 비율&lt;/strong&gt;(False Positive Rate, FPR): 실제 거짓인 행 데이터를 양성으로 잘못 예측한 비율, 혼동행렬로 FP/(FP+TN)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;참 양성 비율&lt;/strong&gt;(True Positive Rate, TPR): 실제 참인 행 데이터를 양성으로 올바르게 예측한 비율, 혼동행렬 TP/((TP+FN)&lt;/p&gt;
+
+&lt;p&gt;모든 행 데이터를 정확히 예측했을 경우 ROC 곡선은 (0.0, 1.0)을 지나며 AUC는 1.0이다. 랜덤 예측은 ROC 곡선이 위의 점선과 같은 대각선을 지난다. 예측값이 반대일 경우 AUC는 1.0 - 원래의 AUC가 된다.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;[##_Image&lt;/td&gt;
+      &lt;td&gt;kage@BLEG1/btq4535HeRd/0eQgFF5ZgMIrK4amYwt6xK/img.png&lt;/td&gt;
+      &lt;td&gt;CDM&lt;/td&gt;
+      &lt;td&gt;1.3&lt;/td&gt;
+      &lt;td&gt;{“originWidth”:4000,”originHeight”:516,”style”:”alignLeft”,”width”:411,”height”:53}_##]&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;양성이 매우 적은 불균형 데이터는 양성인 예측값을 얼마나 높은 확률로 예측 가능한가가 AUC에 크게 영향을 미치지만, 음성인 예측값의 오차 영향은 크지 않다. 지니 계수(Gini Coefficient)는 Gini = 2AUC - 1로 계산하며 AUC와 선형 관계이다. &lt;/p&gt;
+
+&lt;p&gt;사이킷 런에서 metrics 모듈의 &lt;strong&gt;roc_auc_score 함수&lt;/strong&gt;로 계산이 가능하다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;4) 다중 클래스 분류의 평가지표&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;**①&lt;/strong&gt; multi-class accuracy**&lt;/p&gt;
+
+&lt;p&gt;예측이 올바른 비율을 나타내는 지표로, 예측이 정답인 행 데이터 수를 모든 행 데이터 수로 나눈 결과이다.&lt;/p&gt;
+
+&lt;p&gt;사이킷 런에서 metrics 모듈의 &lt;strong&gt;accuracy_score 함수&lt;/strong&gt;로 계산이 가능하다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;**②&lt;/strong&gt; multi-class logloss(다중 클래스 로그 손실)**&lt;/p&gt;
+
+&lt;p&gt;각 클래스의 예측 확률을 제출하고, 행 데이터가 속한 클래스의 예측 확률을 로그를 취해 부호를 반전시킨 값이 점수이다.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;[##_Image&lt;/td&gt;
+      &lt;td&gt;kage@Cv7xd/btq434qtMaT/ZE1bvH5iG5JMdhTJKVzq80/img.png&lt;/td&gt;
+      &lt;td&gt;CDM&lt;/td&gt;
+      &lt;td&gt;1.3&lt;/td&gt;
+      &lt;td&gt;{“originWidth”:4000,”originHeight”:450,”style”:”alignLeft”,”width”:417,”height”:47}_##]&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;예측값은 행 데이터 수 * 클래스 수의 행렬로 제출하며, 행 데이터가 속한 클래스의 확률을 낮게 예측하면 패널티가 크게 주어진다.&lt;/p&gt;
+
+&lt;p&gt;각 행 데이터에 대한 예측 확률의 합계는 1이 돼야 하므로 그렇지 않으면 평가지표 계산에서 자동 조정한다.&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;from sklearn.metrics import log_loss
+
+# 3 클래스 분류의 실젯값과 예측값
+y_true = np.array([0, 2, 1, 2, 2])
+y_pred = np.array([[0.68, 0.32, 0.00],
+				   [0.00, 0.00, 1.00],
+                   [0.60, 0.40, 0.00],
+                   [0.00, 0.00, 1.00],
+                   [0.28, 0.12, 0.60]])
+logloss = log_loss(y_true, y_pred)
+print(logloss)
+# 0.3626
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;사이킷 런 metrics 모듈의 &lt;strong&gt;log_loss 함수&lt;/strong&gt;로 계산이 가능하다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;**③&lt;/strong&gt; mean-F1, macro-F1, micro-F1**&lt;/p&gt;
+
+&lt;p&gt;F1-score를 여러 개의 클래스로 확장한 것이다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;mean-F1&lt;/strong&gt;에서는 행 데이터 단위로 F1-score를 계산하고 그 평균값이 평가지표 점수가 된다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;macro-F1&lt;/strong&gt;에서는 각 클래스 별 F1-score를 계산하고 이들의 평균값을 평가지표 점수로 삼는다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;micro-F1&lt;/strong&gt;에서는 행 데이터 x 클래스의 각 쌍에 대해 TP, TN, FP, FN 중 어디에 해당하는 지 카운트 하고, 이에 근거해 F 점수를 계산한 값이 평가지표 점수이다.&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# 다중 레이블 분류
+# mean_f1, macro_f1, micro_f1
+
+from sklearn.metrics import f1_score
+
+# 다중 레이블 분류의 실젯값·예측값은 평가지표 계산상으로는 행 데이터x클래스의 이진행렬로 해야 다루기 쉬움
+
+# 실젯값 - [[1, 2], [1], [1, 2, 3], [2, 3], [3]]
+y_true = np.array([[1, 1, 0],
+				   [1, 0, 0],
+                   [1, 1, 1],
+                   [0, 1, 1],
+                   [0, 0, 1]])
+                   
+# 예측값 - [[1, 3], [2], [1, 3], [3], [3]]
+y_pred = np.array([1, 0, 1],
+				  [0, 1, 0],
+                  [1, 0, 1],
+                  [0, 0, 1],
+                  [0, 0, 1]])
+
+# mean-f1는 행 데이터마다 F1-score를 계산해 평균을 구한다
+mean_f1 = np.mean([f1_score(y_true[i, :], y_pred[i, :]) for i in range(len(y_true))])
+
+# macro-f1에서는 행 데이터마다 F1-score를 계산해 평균을 구한다
+n_class = 3
+macro_f1 = np.mean([f1_score((y_true[:, c], y_pred[:, c]) for c in range(n_class)])
+
+# micro-f1에서는 행 데이터x클래스 쌍으로 TP/TN/FP/FN을 계산해 F1-score를 구한다
+micro_f1 = f1_score(y_true.reshape(-1), y_pred.reshape(-1))
+
+print(mean_f1, macro_f1, micro_f1)
+# 0.5933, 0.5524, 0.6250
+
+# 사이킷런에서도 메서드를 사용해 계산이 가능하다
+mean_f1 = f1_score(y_true, y_pred, average=&apos;samples&apos;)
+macro_f1 = f1_score(y_true, y_pred, average=&apos;macro&apos;)
+micro_f1 = f1_score(y_true, y_pred, average=&apos;micro&apos;)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;**④&lt;/strong&gt; QWK(Quadratic Weighted Kappa)**&lt;/p&gt;
+
+&lt;p&gt;다중 클래스 분류에서 클래스 간에 순서 관계가 있을 때 사용하며, 각 행 데이터의 예측값이 어느 클래스에 속하는 지 제출한다.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;[##_Image&lt;/td&gt;
+      &lt;td&gt;kage@buZFB1/btq4YrNGVEb/bWVqnAWUJLGzSBD9nj5mKk/img.png&lt;/td&gt;
+      &lt;td&gt;CDM&lt;/td&gt;
+      &lt;td&gt;1.3&lt;/td&gt;
+      &lt;td&gt;{“originWidth”:3119,”originHeight”:1000,”style”:”alignLeft”,”width”:225,”height”:72}_##]&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;strong&gt;완전한 예측일 때는 1, 랜덤 예측일 때는 0, 랜덤보다 나쁜 예측일 때는 마이너스 값&lt;/strong&gt;이 된다. 예측값의 각 클래스 비율에 따라 분모의 값이 달라지므로 예측값을 바꿨을 때 움직임을 이해하긴 어렵고, 예측값의 각 클래스 비율이 고정이라 생각하면 제곱오차에 가까운 지표가 돼 이해하기 좀 쉬워진다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;5) 추천의 평가지표&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;**①&lt;/strong&gt; MAP@K(Mean Average Precision at(@) K)**&lt;/p&gt;
+
+&lt;p&gt;각 행 데이터가 하나 또는 여러 클래스에 속할 때 포함될 가능성이 높을 것으로 예측한 순서대로 K개의 클래스를 예측값으로 삼는다.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;[##_Image&lt;/td&gt;
+      &lt;td&gt;kage@NxwUT/btq47Sv0sFV/ces2JIDEmAEqZz1nIVqlc0/img.png&lt;/td&gt;
+      &lt;td&gt;CDM&lt;/td&gt;
+      &lt;td&gt;1.3&lt;/td&gt;
+      &lt;td&gt;{“originWidth”:4000,”originHeight”:518,”style”:”alignLeft”,”width”:318,”height”:41}_##]&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;각 행 데이터에 대해 K개 미만으로 예측할 수도 있지만, 그렇다고 점수가 올라가진 않으므로 보통은 K개를 예측값으로 한다. K개의 예측값과 실제 정답 수가 같아도, 정답인 예측값이 순서에 맞지 않게 뒤로 밀리면 점수는 낮아지므로 예측값의 순서가 중요하다. &lt;strong&gt;완전한 예측&lt;/strong&gt; 실시시 &lt;strong&gt;1&lt;/strong&gt;, &lt;strong&gt;완전히 잘못된 예측&lt;/strong&gt; 실시시 &lt;strong&gt;0&lt;/strong&gt;이 된다.&lt;/p&gt;
+
+&lt;h4 id=&quot;평가지표와-목적함수&quot;&gt;&lt;strong&gt;평가지표와 목적함수&lt;/strong&gt;&lt;/h4&gt;
+
+&lt;p&gt;&lt;strong&gt;차이점&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;목적함수&lt;/strong&gt;: &lt;strong&gt;모델 학습 시 최적화되는 함수&lt;/strong&gt;로, 모델 학습에서는 목적함수로 사용한 오차가 최소가 되게 결정 트리의 분기나 선형 모델의 회귀계수 추가 및 갱신 등을 수행한다. 학습이 잘 진행되려면 목적함수는 미분할 수 있어야 한다는 제약이 있다.&lt;/p&gt;
+
+&lt;p&gt;회귀 문제에서는 RMSE, 분류 문제에서는 로그 손실을 주로 사용한다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;평가지표&lt;/strong&gt;: 모델 또는 예측값의 &lt;strong&gt;성능이 좋고 나쁨을 측정하는 지표&lt;/strong&gt;로, 실젯값과 예측값으로 계산할 수 있으면 특별한 제약은 없다.&lt;/p&gt;
+
+&lt;p&gt;평가지표의 종류는 다양하며, 비즈니스상의 가치 판단 등을 고려해 평가지표를 정할 수 있다. 목적함수로 사용하려 해도 예측값 변경 시, 점수의 변화가 수학적으로 다루기 어려운 경우 모델의 학습 진행이 잘 안될 때도 많다.&lt;/p&gt;
+
+&lt;p&gt;해당 &lt;strong&gt;평가지표와&lt;/strong&gt; 모델 학습에 사용하는 &lt;strong&gt;목적함수가 일치하면 이해하기 쉽고&lt;/strong&gt;, 평가지표에 대해 대략 최적화된 예측값을 출력하는 모델이 되었다고 볼 수 있지만, 서로 &lt;strong&gt;일치하지 않으면 평가지표에 최적화되지 않을 수 있다&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;사용자 정의 평가지표 &amp;amp; 사용자 정의 목적함수&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;모델이나 라이브러리에서 제공하지 않는 평가지표나 목적함수를 사용자가 정의해 사용할 수 있다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;사용자 정의 목적함수&lt;/strong&gt;를 지정하면 해당 함수를 최소화하도록 학습이 진행된다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;사용자 정의 평가지표&lt;/strong&gt;를 지정하면 해당 평가지표에 의한 점수가 학습 시 모니터링으로 표시된다.&lt;/p&gt;
+
+&lt;p&gt;이를 구현하려면 사용하는 라이브러리의 API에 따라 함수를 만들어야한다.&lt;/p&gt;
+
+&lt;p&gt;다음은 xgboost에서 사용자 정의 평가지표와 사용자 정의 목적함수를 작성하는 예제 코드이다.&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import xgboost as xgb
+from sklearn.metrics import log_loss
+
+# 특징과 목적변수를 xgboost의 데이터 구조로 변환
+# 학습 데이터의 특징과 목적변수: tr_x, tr_y
+# 검증 데이터의 특징과 목적변수: va_x, va_y
+
+dtrain = xgb.DMatrix(tr_x, label=tr_y)
+dvalid = xgb.DMatrix(va_x, label=va_y)
+
+# 사용자 정의 목적함수(이 경우는 logloss, xgboost의 &apos;binary:logistic&apos;과 동일)
+def logregobj(preds, dtrain):
+  labels = dtrain.get_label()			# 실젯값 레이블 획득
+  preds = 1.0 / (1.0 + np.exp(-preds)	# 시그모이드 함수
+  grad = preds - labels					# 그레이디언트
+  hess = preds * (1.0 - preds)			# 시그모이드 함수 미분
+  return grad, hess
+  
+# 사용자 정의 평가지표(이 경우 오류율)
+def evalerror(preds, dtrain):
+  labels = dtrain.get_label()			# 실젯값 레이블 획득
+  return &apos;custom-error&apos;, float(sum(labels != (preds &amp;gt; 0.0))) / len(labels)
+  
+# 하이퍼파라미터 설정
+params = {&apos;verbosity&apos;: 0, &apos;random_state&apos;: 71}
+num_round = 50
+watchlist = [(dtrain, &apos;train&apos;), (dvalid, &apos;eval&apos;)]
+
+# 모델 학습 실행
+bst = xgb.train(params, dtrain, num_round, watchlist, obj=logregobj, feval=evalerror)
+
+# 목적함수에 binary:logistic을 지정했을 때와 달리 확률로 변환하기 전 값으로
+# 예측값이 출력되므로 변환이 필요하다
+pred_val = bst.predict(dvalid)
+pred = 1.0 / (1.0 + np.exp(-pred_val))
+logloss = log_loss(va_y, pred)
+print(logloss)
+
+# (참고) 일반적인 방법으로 학습하는 경우
+# xgboost 버전이 낮을 경우엔 &apos;verbosity&apos;:0을 &apos;silent&apos;:1로 변경 후 실행
+params = {&apos;verbosity&apos;: 0, &apos;random_state&apos;: 71, &apos;objective&apos;: &apos;binary:logistic&apos;}
+bst = xgb.train(params, dtrain, num_round, watchlist)
+
+pred = bst.predict(dvalid)
+logloss = log_loss(va_y, pred)
+pring(logloss)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;평가지표의-최적화&quot;&gt;&lt;strong&gt;평가지표의 최적화&lt;/strong&gt;&lt;/h4&gt;
+
+&lt;p&gt;&lt;strong&gt;평가지표의 최적화 접근법&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;① 간단하고 올바른 모델링 시행&lt;/p&gt;
+
+&lt;p&gt;② 학습 데이터를 전처리하고 다른 평가지표를 최적화&lt;/p&gt;
+
+&lt;p&gt;③ 다른 평가지표를 최적화하고 후처리&lt;/p&gt;
+
+&lt;p&gt;④ 사용자 정의 목적함수를 사용&lt;/p&gt;
+
+&lt;p&gt;⑤ 다른 평가지표를 최적화하고 학습 조기 종료&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;임곗값 최적화&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;최적의 임곗값을 구하는 방법:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;① 모든 임곗값을 알아내는 방법: 0.01부터 0.99까지 0.01씩 증가시키며 모든 임계값을 조사해 가장 좋은 점수가 되는 값을 채택&lt;/p&gt;
+
+&lt;p&gt;② 최적화 알고리즘을 이용하는 방법: scipy.optimize 모듈 등을 이용해 ‘임계값을 인수로 점수를 반환하는 함수’를 최적화&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;넬더-미드&lt;/strong&gt;: 목적함수를 미분할 수 없어도 쓸 수 있는 최적화 알고리즘&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# 임계값(threshold)의 최적화
+
+from sklearn.metrics import f1_score
+from sklearn.optimize import minimize
+
+# 행 데이터 데이터 생성 준비
+rand = np.random.RandomState(seed=71)
+train_y_prob = np.linspace(0, 1.0, 10000)
+
+# 실젯값과 예측값을 train_y, train_pred_prob이었다고 가정
+train_y = pd.Series(rand.uniform(0.0, 1.0, train_y_prob.size) &amp;lt; train_y_prob)
+train_pred_prob = np.clip(train_y_prob * np.exp(rand.standard_normal(train_y_prob.shape) * 0.3), 0.0, 1.0)
+
+# 임계값(thershold)을 0.5로 하면, F1은 0.722
+init_threshold= 0.5
+init_score = f1_score(train_y, train_pred_prob &amp;gt;= init_threshold)
+print(init_threshold, init_score)
+
+# 최적화의 목적함수를 설정
+def f1_opt(x):
+  return -f1_score(train_y, train_pred_prob &amp;gt;= x)
+  
+# scipy.optimize의 minimize 메서드에서 최적의 임곗값 구하기
+# 구한 최적의 임곗값을 바탕으로 F1을 구하면 0.756이 된다
+result = minimize(f1_opt, x0 = np.array([0.5]), method = &quot;Nelder-Mead&quot;)
+best_threshold = result[&apos;x&apos;].item()
+best_score = f1_score(train_y, train_pred_prob &amp;gt;= best_threshold)
+print(best_threshold, best_score)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;임곗값 최적화와 OOF 예측의 필요성&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;F1-score를 최대로 하는 간단한 예는 OOF 예측으로 하지 않아도 큰 영향은 없지만, OOF로 최적화 수행 시 임계값 변화에 차이가 있거나 점수에 달라지는 현상을 확인 가능하다. 또한 복잡한 최적화 수행 시 과도한 평가 점수가 되는 걸 피할 수 있다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;실젯값과 예측 확률이 주어진 상황에서 OOF의 F1-score 최적화를 수행하는 순서와 구현&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;① 학습 데이터를 여러 개로 나눈다. (여기선 fold1, fold2, fold3, fold4)&lt;/p&gt;
+
+&lt;p&gt;② fold2, fold3, fold4의 실젯값과 예측 확률에서 최적의 임곗값을 구하고 그 임곗값으로 fold1의 F1-score를 계산한다.&lt;/p&gt;
+
+&lt;p&gt;③ 다른 fold들도 자신 이외 fold의 실젯값과 예측 확률로부터 최적의 임곗값을 구하고, 그 임곗값으로 F1-score를 계산한다.&lt;/p&gt;
+
+&lt;p&gt;④ 테스트 데이터에 적용하는 임곗값은 각 fold 임곗값의 평균으로 한다.&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# OOF(out-of-fold)에서의 임곗값(threshold)의 최적화
+
+from scipy.optimize import minimize
+from sklearn.metrics import f1_score
+from sklearn.model_selection import KFold
+
+# 샘플 데이터 생성 준비
+rand = np.random.RandomState(seed=71)
+train_y_prob = np.linspace(0, 1.0, 10000)
+
+# 실젯값과 예측값을 train_y, train_pred_prob이었다고 가정
+train_y = pd.Series(rand.uniform(0.0, 1.0, train_y_prob.size) &amp;lt; train_y_prob)
+train_pred_prob = np.clip(train_y_prob * np.exp(rand.standard_normal(train_y_prob.shape) * 0.3), 0.0, 1.0)
+
+# 교차 검증 구조로 임곗값을 구함
+thresholds = []
+scores_tr = []
+scores_va = []
+
+kf = KFold(n_splits = 4, random_state = 71, shuffle = True)
+for i, (tr_idx, va_idx) in enumerate(kf.split(train_pred_prob)):
+  tr_pred_prob, va_pred_prob = train_pred_prob[tr_idx], train_pred_prob[va_idx]
+  tr_y, va_y = train_y.iloc[tr_idx], train_y.iloc[va_idx]
+  
+# 최적화 목적함수를 설정
+def f1_opt(x):
+  return -f1_score(tr_y, tr_pred_prob &amp;gt;= x)
+  
+# 학습 데이터로 임곗값을 실시하고 검증 데이터로 평가 수행
+result = minimize(f1_opt, x0 = np.array([0.5]), method = &quot;Nelder-Mead&quot;)
+threshold = result[&apos;x&apos;].item()
+score_tr = f1_score(tr_y, tr_pred_prob &amp;gt;= threshold)
+score_va = f1_score(va_y, va_pred_prob &amp;gt;= threshold)
+print(threshold, score_tr, score_va)
+
+thresholds.append(threshold)
+scores_tr.append(score_tr)
+scores_va.append(score_va)
+
+# 각 fold의 임곗값 평균을 테스트 데이터에 적용
+threshold_test = np.mean(thresholds)
+print(threshold_test)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;예측 확률과 조정&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;1) 예측 확률이 왜곡된 경우&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;① 데이터가 충분하지 않은 경우&lt;/p&gt;
+
+&lt;p&gt;② 모델 학습 알고리즘상 타당한 확률을 예측하도록 최적화되지 않은 경우&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2) 예측 확률의 조정 방법&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;① 예측값을 n제곱&lt;/p&gt;
+
+&lt;p&gt;② 0이나 1에 극단으로 가까운 확률은 제외&lt;/p&gt;
+
+&lt;p&gt;③ 스태킹&lt;/p&gt;
+
+&lt;p&gt;④ CalibratedClassifierCV&lt;/p&gt;
+
+&lt;h4 id=&quot;데이터-정보-누출&quot;&gt;&lt;strong&gt;데이터 정보 누출&lt;/strong&gt;&lt;/h4&gt;
+
+&lt;p&gt;&lt;strong&gt;1) 예측에 유용한 정보 누출: 경진 대회 설계의 문제&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;주최자가 사용을 허가하지 않은 정보가 유출되고 참가자가 그것을 이용하는 경우로, 공정하지 못하게 좋은 모델이나 예측값을 작성할 수 있다.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;[##_Image&lt;/td&gt;
+      &lt;td&gt;kage@LaJYr/btq415JDJQZ/mGwaEk0oP4mbUeodCQ58r1/img.png&lt;/td&gt;
+      &lt;td&gt;CDM&lt;/td&gt;
+      &lt;td&gt;1.3&lt;/td&gt;
+      &lt;td&gt;{“originWidth”:1132,”originHeight”:520,”style”:”alignLeft”,”width”:623,”height”:286}_##]&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;strong&gt;2) 검증 방법이 잘못된 정보 누출: 모델 구축의 기술적 문제&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;검증 데이터의 목적변수 정보를 잘못 받아들여 학습한 결과, 검증에서 부당하게 높은 점수가 나오는 것&lt;/p&gt;</content><author><name></name></author><category term="kaggle" /><category term="kaggle" /><summary type="html">// 아래 내용은 [데이터가 뛰어노는 AI 놀이터, 캐글]으로 학습한 내용을 정리하였다.</summary></entry><entry><title type="html">메타버스 1주차</title><link href="http://localhost:4000/2021/01/24/metaverse-1%EC%A3%BC%EC%B0%A8" rel="alternate" type="text/html" title="메타버스 1주차" /><published>2021-01-24T00:00:13+09:00</published><updated>2021-01-24T00:00:13+09:00</updated><id>http://localhost:4000/2021/01/24/metaverse-1%EC%A3%BC%EC%B0%A8</id><content type="html" xml:base="http://localhost:4000/2021/01/24/metaverse-1%EC%A3%BC%EC%B0%A8"></content><author><name></name></author><category term="metaverse" /><category term="study" /><summary type="html"></summary></entry><entry><title type="html">This is Just Another Post</title><link href="http://localhost:4000/2017/03/25/another-post" rel="alternate" type="text/html" title="This is Just Another Post" /><published>2017-03-25T02:30:13+09:00</published><updated>2017-03-25T02:30:13+09:00</updated><id>http://localhost:4000/2017/03/25/another-post</id><content type="html" xml:base="http://localhost:4000/2017/03/25/another-post">&lt;p&gt;I have some text.&lt;/p&gt;
 
 &lt;p&gt;I want some &lt;em&gt;italics&lt;/em&gt;.&lt;/p&gt;
 
