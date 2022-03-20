@@ -86,81 +86,14 @@
         <span id="post-title" class="card-title">경진대회 평가지표</span>
         <p id="post-date">
           <i class="material-icons">date_range</i>
-          18/05/2021 00:00
+          17/05/2021 05:13
         </p>
-        <p id="post-content"><p data-ke-size="size14"><span style="background-color: #dddddd; font-family: 'Noto Sans Light';"><i>// 아래 내용은 [데이터가 뛰어노는 AI 놀이터, 캐글]으로 학습한 내용을 정리하였다.</i></span>
-<hr contenteditable="false" data-ke-type="horizontalRule" data-ke-style="style6" />
+        <p id="post-content"><em>// 아래 내용은 [데이터가 뛰어노는 AI 놀이터, 캐글]으로 학습한 내용을 정리하였다.</em>
 
-<h4 data-ke-size="size20"><span style="font-family: 'Noto Sans Demilight', 'Noto Sans KR';"><b>경진 대회의 종류</b></span></h4>
-<p data-ke-size="size18"><span style="font-family: 'Noto Sans Light';"><b>1) 회귀(Regression) 문제</b><b></b></span><span style="font-family: 'Noto Sans Light';"><b></b></span><span style="font-family: 'Noto Sans Light';"><b></b></span>
-<p data-ke-size="size16"><span style="font-family: 'Noto Sans Light';">수치를 예측하는 문제로, 평가 지표로는 RMSE, MAE 등이 있다.</span>
-<p data-ke-size="size18">&nbsp;
-<p data-ke-size="size18"><span style="font-family: 'Noto Sans Light';"><b>2_1) 이진 분류(Binary classification) 문제</b></span><span style="font-family: 'Noto Sans Light';"><b></b></span><span style="font-family: 'Noto Sans Light';"><b></b></span>
-<p data-ke-size="size16"><span style="font-family: 'Noto Sans Light';">데이터가 어떤 속성에 속하는지를 예측하는 문제로, <span style="color: #0593d3;">①<u><span style="color: #0593d3;">0 또</span>는 1의 레이블로 예측하는 경우</u></span>와 <span style="color: #0593d3;">②<u><span style="color: #0593d3;">0에</span>서 1 사이의 확률로 예측하는 경우</u></span>로 나뉜다. ①의 평가지표로는 F1-score를, ②는 로그 손실이나 AUC 등을 사용한다.</span>
-<p data-ke-size="size18">&nbsp;
-<p data-ke-size="size18"><span style="font-family: 'Noto Sans Light';"><b>2_2) 다중 클래스 분류 문제</b></span><span style="font-family: 'Noto Sans Light';"><b></b></span>
-<p data-ke-size="size16"><span style="font-family: 'Noto Sans Light';"><b>다중 클래스 분류</b>(multi-class classification): 행 데이터(record)가 여러 클래스 중 어느 하나의 선택지에 속하는 분류 문제</span>
-<p data-ke-size="size16"><span style="font-family: 'Noto Sans Light';"><b>다중 레이블 분류</b>(multi-label classification): 행 데이터가 동시에 여러 클래스에 속하는 분류 문제</span>
-<p data-ke-size="size16">&nbsp;
-<p data-ke-size="size16"><span style="font-family: 'Noto Sans Light';">이진 분류와 마찬가지로 <span style="color: #0593d3;">①<u>데이터가 포함되었다고 예측되는 클래스의 레이블을 제출하는 경우</u></span>와 <span style="color: #0593d3;">②데<u><span style="color: #0593d3;">이터가</span> 각 클래스에 포함될 확률을 0에서 1 사이의 수치로 제출하는 경우</u></span>로 나뉜다.</span>
-<p data-ke-size="size16">&nbsp;
-<p data-ke-size="size16"><span style="font-family: 'Noto Sans Light';">다중 레이블 분류의 기본적인 솔루션은 이진 분류를 클래스 수만큼 반복하며, 평가지표로는 다중 클래스 분류일 때 <span style="color: #f89009;">다중 클래스 로그 손실</span>, 다중 레이블 분류일 때 <span style="color: #f89009;">mean-F1</span> 또는 <span style="color: #f89009;">macro-F1</span> 등을 사용한다.</span>
-<p data-ke-size="size16">&nbsp;
-<p data-ke-size="size18"><span style="font-family: 'Noto Sans Light';"><b>3) 추천 문제</b><b></b><b></b></span>
-<p data-ke-size="size16"><span style="font-family: 'Noto Sans Light';"><b>추천</b>(Recommendation): 고객의 구매가 기대되는 상품과 반응이 있을 법한 광고 등을 예측하는 문제</span>
-<p data-ke-size="size16">&nbsp;
-<p data-ke-size="size16"><span style="font-family: 'Noto Sans Light';">구매 가능성에 따라 <span style="color: #0593d3;">①<u>순위를 매겨 예측 결과를 제출하는 경우</u></span>와 <span style="color: #0593d3;">②<u>순위를 매기지 않고 제출하는 경우</u></span>로 나뉜다. ①은&nbsp;하나의 행 데이터에 여러개의 정답이 있고, ②는 여러 개의 예측값을 제출한다.</span>
-<p data-ke-size="size16">&nbsp;
-<p data-ke-size="size16"><span style="font-family: 'Noto Sans Light';">평가 지표로는 순위를 매길 땐<span style="color: #f89009;"> MAP@K2</span>, 순위를 매기지 않을 땐 <span style="color: #f89009;">mean-F1</span>, <span style="color: #f89009;">macro-F1</span>을 사용한다.&nbsp;</span>
-<p data-ke-size="size16">&nbsp;
-<p data-ke-size="size18"><span style="font-family: 'Noto Sans Light';"><b>4) 그 외 문제들</b><b></b></span>
-<p data-ke-size="size18">&nbsp;
-<p data-ke-size="size16"><span style="font-family: 'Noto Sans Light';">① <b>객체 탐지</b>(object detection): 이미지에 포함된 물체의 클래스와 해당 물체가 존재하는 직사각형 경계 박스 영역을 추정하는 문제</span>
-<p data-ke-size="size16">&nbsp;
-<p data-ke-size="size16"><span style="font-family: 'Noto Sans Light';">② <b>세분화</b>(segmentation): 이미지에 포함된 물체의 영역을 이미지 픽셀 단위로 추정하는 문제</span><span><span></span></span>
-<p data-ke-size="size18">&nbsp;
-<p data-ke-size="size18">&nbsp;
-<h4 data-ke-size="size20"><span style="font-family: 'Noto Sans Demilight', 'Noto Sans KR';"><b>경진 대회의 데이터셋</b></span></h4>
-<p data-ke-size="size18"><span style="font-family: 'Noto Sans Light';"><b>1) 정형 데이터</b><b></b><b></b></span>
-<p data-ke-size="size16"><span style="font-family: 'Noto Sans Light';"><b>정형 데이터</b>(tabular data): 엑셀 등의 스프레드시트 처럼 행과 열이 있는 형식의 데이터</span>
-<p data-ke-size="size16">&nbsp;
-<p data-ke-size="size16"><span style="font-family: 'Noto Sans Light';"><b>정형 데이터를 다루는 대회에서 제공되는 가장 간단한 데이터 파일 세 가지의 사용</b>:</span>
-<p data-ke-size="size16"><span style="font-family: 'Noto Sans Light';"><b>train.csv</b>를 이용하여 모델 학습</span>
-<p data-ke-size="size16"><span style="font-family: 'Noto Sans Light';"><b>test.csv</b>에 대한 예측 (*test.csv는 예측하고자 하는 목적변수가 없다)</span>
-<p data-ke-size="size16"><span style="font-family: 'Noto Sans Light';"><b>sample_submission.csv</b> 형식으로 제출 파일 작성&nbsp;</span>
-<p data-ke-size="size16">&nbsp;
-<p data-ke-size="size16"><span style="font-family: 'Noto Sans Light';">여러 개의 정형 데이터가 주어지는 경우도 있으며, 데이터 결합과 처리는 그 진행 방법에 따라 행이나 열의 수가 매우 많아질 수 있기에 연산량이나 메모리 등에 주의해야 한다.</span>
-<p data-ke-size="size16">&nbsp;
-<p data-ke-size="size18"><span style="font-family: 'Noto Sans Light';"><b>2) 외부 데이터</b></span>
-<p data-ke-size="size16"><span style="font-family: 'Noto Sans Light';">경진 대회마다 규칙은 다르며, 캐글의 경우는 외부 데이터 사용이 허용되지 않는 경우가 많아 대회에서 제공하는 데이터만 가지고 학습과 예측을 수행해야 한다. 외부 데이터가 허용되는 대회에서는 사용한 외부 데이터의 내용을 Discussion에 공유해야하는 규칙이 있는 경우가 많다.</span>
-<p data-ke-size="size16">&nbsp;
-<p data-ke-size="size18"><span style="font-family: 'Noto Sans Light';"><b>3) 시계열 데이터</b></span>
-<p data-ke-size="size16"><span style="font-family: 'Noto Sans Light';">시간의 흐름과 함께 관측된 데이터를 말한다.</span>
-<p data-ke-size="size16">&nbsp;
-<p data-ke-size="size16">&nbsp;
-<h4 data-ke-size="size20"><span style="font-family: 'Noto Sans Demilight', 'Noto Sans KR';"><b>평가지표</b></span></h4>
-<p data-ke-size="size16"><span style="font-family: 'Noto Sans Light';"><b>평가지표</b>: 학습시킨 모델의 성능이나 그 예측 결과의 좋고 나쁨을 측정하는 지표</span>
-<p data-ke-size="size16"><span style="font-family: 'Noto Sans Light';">경진 대회에서 각 대회마다 정해진 평가지표로 점수가 산출 되고 순위가 결정 된다.</span>
-<p data-ke-size="size16">&nbsp;
-<div data-ke-type="moreLess" data-text-more="더보기" data-text-less="닫기"><a class="btn-toggle-moreless">더보기</a>
-<div class="moreless-content">
-<p data-ke-size="size14"><span>N: 행 데이터의 수 / i: 1, 2, ..., N; 각 행 데이터의 인덱스 / yi: i번째 행 데이터의 실젯값 /yi^: i번째 행 데이터의 예측값</span>
-</div>
-</div>
-<p data-ke-size="size18"><span style="font-family: 'Noto Sans Demilight', 'Noto Sans KR';"><b>1) 회귀의 평가지표</b></span><span style="font-family: 'Noto Sans Demilight', 'Noto Sans KR';"><b></b></span>
-<p data-ke-size="size18"><span style="font-family: 'Noto Sans Light';"><b>① <span style="color: #ef6f53;">RMSE</span>(Root Mean Square Error, 제곱근평균오차)</b></span>
-<p data-ke-size="size16"><span style="font-family: 'Noto Sans Light';">회귀 문제에서 가장 대표적인 평가지표로, 각 행 데이터의 예측값과 실젯값의 차이를 제곱하고 그 값의 평균을 내 제곱근을 구한다.</span>
-[##_Image|kage@b8cWpG/btq4YsMBwus/l6B8oRw2gTk9gtLbW5kvq1/img.png|CDM|1.3|{"originWidth":3999,"originHeight":984,"style":"alignLeft","width":236,"height":58}_##]
-<p data-ke-size="size16"><span style="font-family: 'Noto Sans Light';">사이킷런&nbsp;<span style="color: #8a3db6;">metrics</span>&nbsp;모듈의&nbsp;<b><span style="color: #8a3db6;">mean_squared_error 함수</span></b>를 이용해 계산이 가능하다.</span>
-<p data-ke-size="size14"><span style="font-family: 'Noto Sans Light';">(mean_squared_error: 매개변수 squared가 True -&gt; MSE, False -&gt; RMSE를 계산할 수 있다)</span>
-<pre id="code_1621180558361" class="python" data-ke-language="python" data-ke-type="codeblock"><code># RMSE
-from sklearn.metrics import mean_squared_error
-
-</code></pre>
 </p>
       </div>
       <div class="card-action">
-        <a href="/2021/05/18/%EA%B2%BD%EC%A7%84%EB%8C%80%ED%9A%8C-%ED%8F%89%EA%B0%80%EC%A7%80%ED%91%9C">
+        <a href="/2021/05/17/%EA%B2%BD%EC%A7%84%EB%8C%80%ED%9A%8C-%ED%8F%89%EA%B0%80%EC%A7%80%ED%91%9C">
           Read More
         </a>
       </div>
