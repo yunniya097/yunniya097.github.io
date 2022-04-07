@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-04-05T13:29:21+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Yunni-Coding</title><subtitle></subtitle><entry><title type="html">Sort Algorithm</title><link href="http://localhost:4000/2021/03/21/Sort" rel="alternate" type="text/html" title="Sort Algorithm" /><published>2021-03-21T18:15:13+09:00</published><updated>2021-03-21T18:15:13+09:00</updated><id>http://localhost:4000/2021/03/21/Sort</id><content type="html" xml:base="http://localhost:4000/2021/03/21/Sort">&lt;p&gt;연속된 데이터를 기준에 따라서 정렬하기 위한 알고리즘&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-04-07T15:36:52+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Yunni-Coding</title><subtitle></subtitle><entry><title type="html">Sort Algorithm</title><link href="http://localhost:4000/2021/03/21/Sort" rel="alternate" type="text/html" title="Sort Algorithm" /><published>2021-03-21T18:15:13+09:00</published><updated>2021-03-21T18:15:13+09:00</updated><id>http://localhost:4000/2021/03/21/Sort</id><content type="html" xml:base="http://localhost:4000/2021/03/21/Sort">&lt;p&gt;연속된 데이터를 기준에 따라서 정렬하기 위한 알고리즘&lt;/p&gt;
 
 &lt;h5 id=&quot;정렬sorting이란&quot;&gt;&lt;strong&gt;정렬(sorting)&lt;/strong&gt;이란?&lt;/h5&gt;
 
@@ -1072,28 +1072,4 @@ A의 i번째 원소와 B의 n-1-i번째 원소를 비교해 B의 원소가 더 �
   &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="python-algorithm-study" /><category term="study" /><category term="python" /><summary type="html">현재 상황에서 가장 좋아 보이는 것만을 선택하는 알고리즘</summary></entry><entry><title type="html">메타버스 1주차</title><link href="http://localhost:4000/2021/01/24/metaverse-1%EC%A3%BC%EC%B0%A8" rel="alternate" type="text/html" title="메타버스 1주차" /><published>2021-01-24T00:00:13+09:00</published><updated>2021-01-24T00:00:13+09:00</updated><id>http://localhost:4000/2021/01/24/metaverse-1%EC%A3%BC%EC%B0%A8</id><content type="html" xml:base="http://localhost:4000/2021/01/24/metaverse-1%EC%A3%BC%EC%B0%A8"></content><author><name></name></author><category term="metaverse" /><category term="study" /><summary type="html"></summary></entry><entry><title type="html">This is Just Another Post</title><link href="http://localhost:4000/2017/03/25/another-post" rel="alternate" type="text/html" title="This is Just Another Post" /><published>2017-03-25T02:30:13+09:00</published><updated>2017-03-25T02:30:13+09:00</updated><id>http://localhost:4000/2017/03/25/another-post</id><content type="html" xml:base="http://localhost:4000/2017/03/25/another-post">&lt;p&gt;I have some text.&lt;/p&gt;
-
-&lt;p&gt;I want some &lt;em&gt;italics&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;I want some &lt;strong&gt;bold&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;h1 id=&quot;this-is-heading-1&quot;&gt;this is heading 1&lt;/h1&gt;
-
-&lt;h2 id=&quot;this-is-heading-2&quot;&gt;this is heading 2&lt;/h2&gt;
-
-&lt;h3 id=&quot;this-is-heading-3&quot;&gt;this is heading 3&lt;/h3&gt;
-
-&lt;p&gt;you want a list?&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;first&lt;/li&gt;
-  &lt;li&gt;second&lt;/li&gt;
-  &lt;li&gt;third&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;you want an ordered list?&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;whatever&lt;/li&gt;
-  &lt;li&gt;whatever&lt;/li&gt;
-  &lt;li&gt;whatever&lt;/li&gt;
-&lt;/ol&gt;</content><author><name></name></author><category term="default" /><category term="test" /><summary type="html">I have some text.</summary></entry></feed>
+&lt;/ul&gt;</content><author><name></name></author><category term="python-algorithm-study" /><category term="study" /><category term="python" /><summary type="html">현재 상황에서 가장 좋아 보이는 것만을 선택하는 알고리즘</summary></entry><entry><title type="html">메타버스 1주차</title><link href="http://localhost:4000/2021/01/24/metaverse-1%EC%A3%BC%EC%B0%A8" rel="alternate" type="text/html" title="메타버스 1주차" /><published>2021-01-24T00:00:13+09:00</published><updated>2021-01-24T00:00:13+09:00</updated><id>http://localhost:4000/2021/01/24/metaverse-1%EC%A3%BC%EC%B0%A8</id><content type="html" xml:base="http://localhost:4000/2021/01/24/metaverse-1%EC%A3%BC%EC%B0%A8"></content><author><name></name></author><category term="metaverse" /><category term="study" /><summary type="html"></summary></entry></feed>
