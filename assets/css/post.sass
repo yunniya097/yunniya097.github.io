@@ -14,7 +14,7 @@ main
 
     &.highlighter-rouge
       margin: 1em 20px
-      width: 75% 
+      width: 100% 
 
       pre
         padding: 5px
@@ -29,7 +29,7 @@ main
       table
         width: auto
   img
-    width: 75%
+    width: 100%
 
 #post-info
   h3
@@ -39,7 +39,7 @@ main
   ul /*시간바*/
     &:not(.browser-default)
       padding-left: 0
-      width: 40%
+      width: 75%
 
       li
         list-style-type: none
@@ -66,6 +66,7 @@ main
 
       @include transition(all .3s ease-in-out)
 
+
 @media only screen and (max-width: 992px)
   #post-info
     h3
@@ -74,3 +75,53 @@ main
     ul
       &:not(.browser-default)
         width: 100%
+
+.toc 
+  position: absolute
+  right: 0px
+  width: 240px
+  color: #9075aa
+  overflow-y: auto
+  overflow-x: hidden
+  padding-left: 0.75rem
+  padding-right: 0.75rem
+  padding-top: 0.25rem
+  padding-bottom: 0.25rem
+  margin-right: 0px
+  font-size: 1rem
+  border-left: 2px solid #e0d9e7
+
+  display: none
+  @media (min-width: 75em)
+    width: 240px
+    display: block
+  
+  @media (min-width: 85em)
+    width: 300px
+    display: block
+  
+  @media (min-width: 95em)
+    width: 360px
+    display: block
+  
+
+  a.toc-active 
+    font-weight: bold
+    transition: all 0.125s ease-in 0s 
+    font-size: 0.75rem
+    color: #9075aa
+  
+
+  ul 
+    list-style-type: none
+    margin-bottom: 0.1rem
+    padding-left: 0rem
+    li 
+      padding-left: .5rem
+    
+  a 
+    color: #9075aa
+    text-decoration: none
+  
+  a:hover 
+    color: #9075aa
