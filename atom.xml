@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>YUNNI-CODING</title>
+  
+  <subtitle>Tech-Blog</subtitle>
+  <link href="http://yunniya097.github.io/atom.xml" rel="self"/>
+  
+  <link href="http://yunniya097.github.io/"/>
+  <updated>2023-07-26T06:00:10.416Z</updated>
+  <id>http://yunniya097.github.io/</id>
+  
+  <author>
+    <name>Yunniya</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Sound Event Detection: A Tutorial 논문 정리</title>
+    <link href="http://yunniya097.github.io/2023/07/26/DSP_SED_Paper/"/>
+    <id>http://yunniya097.github.io/2023/07/26/DSP_SED_Paper/</id>
+    <published>2023-07-26T05:58:13.000Z</published>
+    <updated>2023-07-26T06:00:10.416Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="SOUND-EVENTS-INT-OUR-EVERYDAY-ENVIRONMENT"><a href="#SOUND-EVENTS-INT-OUR-EVERYDAY-ENVIRONMENT" class="headerlink" title="SOUND EVENTS INT OUR EVERYDAY ENVIRONMENT"></a>SOUND EVENTS INT OUR EVERYDAY ENVIRONMENT</h2>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;SOUND-EVENTS-INT-OUR-EVERYDAY-ENVIRONMENT&quot;&gt;&lt;a href=&quot;#SOUND-EVENTS-INT-OUR-EVERYDAY-ENVIRONMENT&quot; class=&quot;headerlink&quot; title=&quot;SOUND EVEN</summary>
+      
+    
+    
+    
+    <category term="Paper" scheme="http://yunniya097.github.io/categories/Paper/"/>
+    
+    <category term="DSP" scheme="http://yunniya097.github.io/categories/Paper/DSP/"/>
+    
+    
+    <category term="SED" scheme="http://yunniya097.github.io/tags/SED/"/>
+    
+    <category term="DSP" scheme="http://yunniya097.github.io/tags/DSP/"/>
+    
+    <category term="Paper" scheme="http://yunniya097.github.io/tags/Paper/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Expectation</title>
+    <link href="http://yunniya097.github.io/2023/07/23/Statistics_Expectation/"/>
+    <id>http://yunniya097.github.io/2023/07/23/Statistics_Expectation/</id>
+    <published>2023-07-23T12:58:13.000Z</published>
+    <updated>2023-07-26T05:54:35.506Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Expectation-of-a-Random-Variable"><a href="#Expectation-of-a-Random-Variable" class="headerlink" title="Expectation of a Random Variable"></a>Expectation of a Random Variable</h2>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;Expectation-of-a-Random-Variable&quot;&gt;&lt;a href=&quot;#Expectation-of-a-Random-Variable&quot; class=&quot;headerlink&quot; title=&quot;Expectation of a Random Vari</summary>
+      
+    
+    
+    
+    
+    <category term="statistics" scheme="http://yunniya097.github.io/tags/statistics/"/>
+    
+  </entry>
+  
+</feed>
