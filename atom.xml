@@ -6,7 +6,7 @@
   <link href="http://yunniya097.github.io/atom.xml" rel="self"/>
   
   <link href="http://yunniya097.github.io/"/>
-  <updated>2023-07-26T06:00:10.416Z</updated>
+  <updated>2023-07-31T06:32:05.727Z</updated>
   <id>http://yunniya097.github.io/</id>
   
   <author>
@@ -17,11 +17,42 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>BART: Denoising Sequence-to-Sequence Pre-training for Natural Language Generation, Translation, and Comprehension 정리</title>
+    <link href="http://yunniya097.github.io/2023/07/31/NLP_BART_Paper/"/>
+    <id>http://yunniya097.github.io/2023/07/31/NLP_BART_Paper/</id>
+    <published>2023-07-31T06:26:03.000Z</published>
+    <updated>2023-07-31T06:32:05.727Z</updated>
+    
+    <content type="html"><![CDATA[<p>📄<a href="https://arxiv.org/pdf/1910.13461.pdf">논문 원본</a></p><h2 id="ABSTRACT"><a href="#ABSTRACT" class="headerlink" title="ABSTRACT"></a>ABSTRACT</h2><p>💡 <strong>본 논문에서 제안하는 내용</strong></p><ul><li>Seq2Seq 모델을 pre-train하기 위한 denoising auto-encoder, <em><strong>BART</strong></em>를 제안</li><li>임의의 noising function으로 text를 corrupting, original text를 reconstruct하기 위해 모델을 learning하는 방식으로 train됨</li><li>standard Transformer-based Neural Machine Translation Architecture</li><li>original text의 순서를 랜덤으로 섞는 방식 + text의 범위를 single mask token으로 대체하는 새로운 in-filing 방식 → SOTA</li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;📄&lt;a href=&quot;https://arxiv.org/pdf/1910.13461.pdf&quot;&gt;논문 원본&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;ABSTRACT&quot;&gt;&lt;a href=&quot;#ABSTRACT&quot; class=&quot;headerlink&quot; title=&quot;ABSTRACT&quot;&gt;</summary>
+      
+    
+    
+    
+    <category term="Paper Review" scheme="http://yunniya097.github.io/categories/Paper-Review/"/>
+    
+    <category term="NLP" scheme="http://yunniya097.github.io/categories/Paper-Review/NLP/"/>
+    
+    
+    <category term="Paper Review" scheme="http://yunniya097.github.io/tags/Paper-Review/"/>
+    
+    <category term="PLM" scheme="http://yunniya097.github.io/tags/PLM/"/>
+    
+    <category term="NLP" scheme="http://yunniya097.github.io/tags/NLP/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Sound Event Detection: A Tutorial 논문 정리</title>
     <link href="http://yunniya097.github.io/2023/07/26/DSP_SED_Paper/"/>
     <id>http://yunniya097.github.io/2023/07/26/DSP_SED_Paper/</id>
     <published>2023-07-26T05:58:13.000Z</published>
-    <updated>2023-07-26T06:00:10.416Z</updated>
+    <updated>2023-07-31T06:26:47.080Z</updated>
     
     <content type="html"><![CDATA[<h2 id="SOUND-EVENTS-INT-OUR-EVERYDAY-ENVIRONMENT"><a href="#SOUND-EVENTS-INT-OUR-EVERYDAY-ENVIRONMENT" class="headerlink" title="SOUND EVENTS INT OUR EVERYDAY ENVIRONMENT"></a>SOUND EVENTS INT OUR EVERYDAY ENVIRONMENT</h2>]]></content>
     
@@ -33,16 +64,16 @@
     
     
     
-    <category term="Paper" scheme="http://yunniya097.github.io/categories/Paper/"/>
+    <category term="Paper Review" scheme="http://yunniya097.github.io/categories/Paper-Review/"/>
     
-    <category term="DSP" scheme="http://yunniya097.github.io/categories/Paper/DSP/"/>
+    <category term="DSP" scheme="http://yunniya097.github.io/categories/Paper-Review/DSP/"/>
     
     
     <category term="SED" scheme="http://yunniya097.github.io/tags/SED/"/>
     
     <category term="DSP" scheme="http://yunniya097.github.io/tags/DSP/"/>
     
-    <category term="Paper" scheme="http://yunniya097.github.io/tags/Paper/"/>
+    <category term="Paper Review" scheme="http://yunniya097.github.io/tags/Paper-Review/"/>
     
   </entry>
   
