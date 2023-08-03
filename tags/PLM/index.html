@@ -30,66 +30,79 @@
       window.addEventListener('hashchange', switchTab, false);
   })();
   </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="YUNNI-CODING" type="application/atom+xml">
-</head><body class="is-3-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.svg" alt="YUNNI-CODING" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="검색" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-6-widescreen"><div class="card"><div class="card-content"><nav class="breadcrumb" aria-label="breadcrumbs"><ul><li><a href="/tags">태그</a></li><li class="is-active"><a href="#" aria-current="page">PLM</a></li></ul></nav></div></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2023-07-31T06:26:03.000Z" title="2023. 7. 31. 오후 3:26:03">2023-07-31</time>&nbsp;게시 됨</span><span class="level-item"><time dateTime="2023-08-03T08:15:43.704Z" title="2023. 8. 3. 오후 5:15:43">2023-08-03</time>&nbsp;업데이트 됨</span><span class="level-item"><a class="link-muted" href="/categories/Paper-Review/">Paper Review</a><span> / </span><a class="link-muted" href="/categories/Paper-Review/NLP/">NLP</a></span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2023/07/31/NLP_BART_Paper/">BART: Denoising Sequence-to-Sequence Pre-training for Natural Language Generation, Translation, and Comprehension 정리</a></p><div class="content"><p>📍 Facebook에서 발표한 논문<br>📍 ACL 2020 accepted</p>
+</head><body class="is-3-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.svg" alt="YUNNI-CODING" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="검색" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-6-widescreen"><div class="card"><div class="card-content"><nav class="breadcrumb" aria-label="breadcrumbs"><ul><li><a href="/tags">태그</a></li><li class="is-active"><a href="#" aria-current="page">PLM</a></li></ul></nav></div></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2023-07-31T06:26:03.000Z" title="2023. 7. 31. 오후 3:26:03">2023-07-31</time>&nbsp;게시 됨</span><span class="level-item"><time dateTime="2023-08-03T08:28:58.356Z" title="2023. 8. 3. 오후 5:28:58">2023-08-03</time>&nbsp;업데이트 됨</span><span class="level-item"><a class="link-muted" href="/categories/Paper-Review/">Paper Review</a><span> / </span><a class="link-muted" href="/categories/Paper-Review/NLP/">NLP</a></span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2023/07/31/NLP_BART_Paper/">BART: Denoising Sequence-to-Sequence Pre-training for Natural Language Generation, Translation, and Comprehension 정리</a></p><div class="content"><p>📍 Facebook에서 발표한 논문<br>📍 ACL 2020 accepted</p>
 <p>📄<a target="_blank" rel="noopener" href="https://arxiv.org/pdf/1910.13461.pdf">논문 원본</a></p>
-<h2 id="ABSTRACT"><a href="#ABSTRACT" class="headerlink" title="ABSTRACT"></a><strong>ABSTRACT</strong></h2><p>💡 본 논문에서 제안하는 내용</p>
-<ul>
-<li>pre-train을 위한 Seq2Seq model, BART 제안</li>
-<li>BART → standard Transformer-based  Architecture<ul>
-<li>corrupted text를 original text에 mapping denoising autoencoder</li>
-</ul>
-</li>
-</ul>
+<h2 id="ABSTRACT"><a href="#ABSTRACT" class="headerlink" title="ABSTRACT"></a><strong>ABSTRACT</strong></h2><pre><code>💡 본 논문에서 제안하는 내용
+
+- pre-train을 위한 Seq2Seq model, BART 제안
+- BART → standard Transformer-based  Architecture
+    - corrupted text를 original text에 mapping denoising autoencoder
+</code></pre>
 <hr>
-<h2 id="INTRODUCTION"><a href="#INTRODUCTION" class="headerlink" title="INTRODUCTION"></a><strong>INTRODUCTION</strong></h2><p>💡 <strong>이전 연구</strong></p>
-<p>self-supervised method는 다양한 NLP task에서 주목할만한 성능을 보여줌</p>
-<ul>
-<li><p>그중 단어의 subset이 random masked text를 reconstruct 하도록 학습된 denoising autoencoder(DAE) 방법이 성공적 → MLM의 변형</p>
-</li>
-<li><p>maksed token의 distribution, 예측 순서, 대체 가능한 context 등을 개선해 더 나은 결과를 보여줌</p>
-</li>
-<li><p>self-supervised method 정의</p>
-<p>  : unlabeled data로 좋은 representation을 얻고자하는 학습 방식</p>
-<p>  → <strong>label(y) 없이 input(x) 내에서 target으로 쓰일만 한 것을 정해서 즉 self로 task를 정해서 supervision 방식으로  모델을 학습</strong></p>
-</li>
-<li><p>DAE</p>
-<p>  말그대로 input에 noise를 추가했음에도 디코더의 output은 noise를 추가하지 않은 원본을 복원하도록 하자는 아이디어</p>
-</li>
-</ul>
-<p>💡 <strong>제안 배경</strong></p>
-<p>당시 최근 연구 방법들은 일반적으로 span prediction이나 generation과 같은 특정한 유형의 end task에 초점을 맞춤 → 적용 가능성이 제한적</p>
-<p>ex) BERT는 generation task 적용 불가능, GPT는 bidirectional context 정보 반영 불가능</p>
-<p>💡 <strong>BART</strong></p>
-<p>: standard Transformer-based architecture를 가지며, <strong>B</strong>idirectional과 <strong>A</strong>uto-<strong>R</strong>egressive <strong>T</strong>ransformer를 합친 model</p>
-<p>⇒ BERT의 encoder + GPT의 decoder</p>
-<h2 id="a-BERT-random-token이-mask로-대체되고-문서가-bidirectionl로-encoding됨-누락된-token은-독립적으로-예측되므로-BERT는-generation에-쉽게-사용할-수-x"><a href="#a-BERT-random-token이-mask로-대체되고-문서가-bidirectionl로-encoding됨-누락된-token은-독립적으로-예측되므로-BERT는-generation에-쉽게-사용할-수-x" class="headerlink" title="![(a) BERT: random token이 mask로 대체되고 문서가 bidirectionl로 encoding됨 .누락된 token은 독립적으로 예측되므로 BERT는 generation에 쉽게 사용할 수 x"></a>![(a) BERT: random token이 mask로 대체되고 문서가 bidirectionl로 encoding됨 .누락된 token은 독립적으로 예측되므로 BERT는 generation에 쉽게 사용할 수 x</h2><h2 id="b-GPT-token은-auto-regressive하게-예측되므로-GPT를-generation에-사용-가능-But-단어는-왼쪽-context에만-조건이-적용되므로-bidirectional-상호-작용을-학습할-수-x"><a href="#b-GPT-token은-auto-regressive하게-예측되므로-GPT를-generation에-사용-가능-But-단어는-왼쪽-context에만-조건이-적용되므로-bidirectional-상호-작용을-학습할-수-x" class="headerlink" title="(b) GPT: token은 auto-regressive하게 예측되므로 GPT를 generation에 사용 가능. But 단어는 왼쪽 context에만 조건이 적용되므로 bidirectional 상호 작용을 학습할 수 x"></a>(b) GPT: token은 auto-regressive하게 예측되므로 GPT를 generation에 사용 가능. But 단어는 왼쪽 context에만 조건이 적용되므로 bidirectional 상호 작용을 학습할 수 x</h2><p>(c) BART: encoder에 대한 input이 decoder의 output과 일치할 필요가 없으므로 arbitary noise transformation이 가능. 여기서는 text의 span을 <MASK>로 대체하여 문서가 손상됨 → 손상된 문서(왼쪽)는 bidirectional model로 encoding한 다음 autoregressive decoder를 사용하여 원본 문서(오른쪽)의 가능성을 계산. fine-tuning을 위해 손상되지 않은 문서를 encoder와 decoder에 모두 입력한 후 decoder의 final hidden state의 represenation을 사용.](BART%20Denoising%20Sequence-to-Sequence%20Pre-training%20f%2071d1b4e36ff54c80a818e8e3080efeb3&#x2F;Untitled.png)</p>
-<h2 id="a-BERT-random-token이-mask로-대체되고-문서가-bidirectionl로-encoding됨-누락된-token은-독립적으로-예측되므로-BERT는-generation에-쉽게-사용할-수-x-1"><a href="#a-BERT-random-token이-mask로-대체되고-문서가-bidirectionl로-encoding됨-누락된-token은-독립적으로-예측되므로-BERT는-generation에-쉽게-사용할-수-x-1" class="headerlink" title="(a) BERT: random token이 mask로 대체되고 문서가 bidirectionl로 encoding됨 .누락된 token은 독립적으로 예측되므로 BERT는 generation에 쉽게 사용할 수 x"></a>(a) BERT: random token이 mask로 대체되고 문서가 bidirectionl로 encoding됨 .누락된 token은 독립적으로 예측되므로 BERT는 generation에 쉽게 사용할 수 x</h2><h2 id="b-GPT-token은-auto-regressive하게-예측되므로-GPT를-generation에-사용-가능-But-단어는-왼쪽-context에만-조건이-적용되므로-bidirectional-상호-작용을-학습할-수-x-1"><a href="#b-GPT-token은-auto-regressive하게-예측되므로-GPT를-generation에-사용-가능-But-단어는-왼쪽-context에만-조건이-적용되므로-bidirectional-상호-작용을-학습할-수-x-1" class="headerlink" title="(b) GPT: token은 auto-regressive하게 예측되므로 GPT를 generation에 사용 가능. But 단어는 왼쪽 context에만 조건이 적용되므로 bidirectional 상호 작용을 학습할 수 x"></a>(b) GPT: token은 auto-regressive하게 예측되므로 GPT를 generation에 사용 가능. But 단어는 왼쪽 context에만 조건이 적용되므로 bidirectional 상호 작용을 학습할 수 x</h2><p>(c) BART: encoder에 대한 input이 decoder의 output과 일치할 필요가 없으므로 arbitary noise transformation이 가능. 여기서는 text의 span을 <MASK>로 대체하여 문서가 손상됨 → 손상된 문서(왼쪽)는 bidirectional model로 encoding한 다음 autoregressive decoder를 사용하여 원본 문서(오른쪽)의 가능성을 계산. fine-tuning을 위해 손상되지 않은 문서를 encoder와 decoder에 모두 입력한 후 decoder의 final hidden state의 represenation을 사용.</p>
-<p><strong>2-step of Pre-train</strong></p>
-<ol>
-<li><p>임의의 noising function으로 text를 손상시킴</p>
-</li>
-<li><p>original text를 reconstruct하도록 Seq2Seq를 학습</p>
-</li>
-</ol>
-<p><strong>장점</strong></p>
-<ul>
-<li>noising flexibility → original text에 길이 변경을 포함한 임의의 transformation 적용 가능<ul>
-<li><p>여러 noising approach 실험</p>
-<p>  →  <strong>(1) original text의 순서를 랜덤으로 섞는 방식</strong> + <strong>(2) 임의의 길이 범위(0 포함)의 text를 single mask token으로 대체하는 새로운 in-filling 방식</strong></p>
-<p>  → SOTA를 이루는 approach 발견</p>
-</li>
-<li><p>model이 전체 문장 길이에 대해 더 많이 추론하고, input에 더 긴 범위의 transformation을 수행하게 함 → MLM과 NSP를 generalize</p>
-</li>
-</ul>
-</li>
-<li>text generation을 위한 fine-tuning에 효과적, comprehension task에서도 잘 작동</li>
-<li>fine-tuning에 대한 새로운 사고 방식 확장<ul>
-<li><p>BART 위에 추가적인 transformer layer를 쌓음</p>
-<p>  → 외국어를 noising된 영어로 mapping하고 이를 다시 denoising하는데 사용함으로써 BART가 강력한 번역모델로 동작하게 함</p>
-</li>
-</ul>
-</li>
-</ul>
+<h2 id="INTRODUCTION"><a href="#INTRODUCTION" class="headerlink" title="INTRODUCTION"></a><strong>INTRODUCTION</strong></h2><pre><code>💡 **이전 연구**
+
+self-supervised method는 다양한 NLP task에서 주목할만한 성능을 보여줌
+
+- 그중 단어의 subset이 random masked text를 reconstruct 하도록 학습된 denoising autoencoder(DAE) 방법이 성공적 → MLM의 변형
+- maksed token의 distribution, 예측 순서, 대체 가능한 context 등을 개선해 더 나은 결과를 보여줌
+
+- self-supervised method 정의
+    
+    : unlabeled data로 좋은 representation을 얻고자하는 학습 방식
+    
+    → **label(y) 없이 input(x) 내에서 target으로 쓰일만 한 것을 정해서 즉 self로 task를 정해서 supervision 방식으로  모델을 학습**
+    
+</code></pre>
+<details>
+<summary>DAE</summary>
+<div markdown="1">
+
+<pre><code>말그대로 input에 noise를 추가했음에도 디코더의 output은 noise를 추가하지 않은 원본을 복원하도록 하자는 아이디어
+</code></pre>
+</div>
+</details>
+        
+
+<pre><code>💡 **제안 배경**
+
+당시 최근 연구 방법들은 일반적으로 span prediction이나 generation과 같은 특정한 유형의 end task에 초점을 맞춤 → 적용 가능성이 제한적
+
+ex) BERT는 generation task 적용 불가능, GPT는 bidirectional context 정보 반영 불가능
+
+💡 **BART**
+
+: standard Transformer-based architecture를 가지며, **B**idirectional과 **A**uto-**R**egressive **T**ransformer를 합친 model
+
+⇒ BERT의 encoder + GPT의 decoder
+
+![image](/Users/seyunahn/yunniya.github.io/themes/icarus/source/img/post/NLP_BART_Paper/Untitled.png)
+</code></pre>
+<blockquote>
+<h2 id="a-BERT-random-token이-mask로-대체되고-문서가-bidirectionl로-encoding됨-누락된-token은-독립적으로-예측되므로-BERT는-generation에-쉽게-사용할-수-x"><a href="#a-BERT-random-token이-mask로-대체되고-문서가-bidirectionl로-encoding됨-누락된-token은-독립적으로-예측되므로-BERT는-generation에-쉽게-사용할-수-x" class="headerlink" title="a) BERT: random token이 mask로 대체되고 문서가 bidirectionl로 encoding됨 .누락된 token은 독립적으로 예측되므로 BERT는 generation에 쉽게 사용할 수 x"></a>a) BERT: random token이 mask로 대체되고 문서가 bidirectionl로 encoding됨 .누락된 token은 독립적으로 예측되므로 BERT는 generation에 쉽게 사용할 수 x</h2><h2 id="b-GPT-token은-auto-regressive하게-예측되므로-GPT를-generation에-사용-가능-But-단어는-왼쪽-context에만-조건이-적용되므로-bidirectional-상호-작용을-학습할-수-x"><a href="#b-GPT-token은-auto-regressive하게-예측되므로-GPT를-generation에-사용-가능-But-단어는-왼쪽-context에만-조건이-적용되므로-bidirectional-상호-작용을-학습할-수-x" class="headerlink" title="(b) GPT: token은 auto-regressive하게 예측되므로 GPT를 generation에 사용 가능. But 단어는 왼쪽 context에만 조건이 적용되므로 bidirectional 상호 작용을 학습할 수 x"></a>(b) GPT: token은 auto-regressive하게 예측되므로 GPT를 generation에 사용 가능. But 단어는 왼쪽 context에만 조건이 적용되므로 bidirectional 상호 작용을 학습할 수 x</h2><p>(c) BART: encoder에 대한 input이 decoder의 output과 일치할 필요가 없으므로 arbitary noise transformation이 가능. 여기서는 text의 span을 <MASK>로 대체하여 문서가 손상됨 → 손상된 문서(왼쪽)는 bidirectional model로 encoding한 다음 autoregressive decoder를 사용하여 원본 문서(오른쪽)의 가능성을 계산. fine-tuning을 위해 손상되지 않은 문서를 encoder와 decoder에 모두 입력한 후 decoder의 final hidden state의 represenation을 사용.</p>
+</blockquote>
+<pre><code>**2-step of Pre-train**
+
+1) 임의의 noising function으로 text를 손상시킴
+
+2) original text를 reconstruct하도록 Seq2Seq를 학습
+
+**장점**
+
+- noising flexibility → original text에 길이 변경을 포함한 임의의 transformation 적용 가능
+    - 여러 noising approach 실험
+        
+        →  **(1) original text의 순서를 랜덤으로 섞는 방식** + **(2) 임의의 길이 범위(0 포함)의 text를 single mask token으로 대체하는 새로운 in-filling 방식**
+        
+        → SOTA를 이루는 approach 발견
+        
+    - model이 전체 문장 길이에 대해 더 많이 추론하고, input에 더 긴 범위의 transformation을 수행하게 함 → MLM과 NSP를 generalize
+- text generation을 위한 fine-tuning에 효과적, comprehension task에서도 잘 작동
+- fine-tuning에 대한 새로운 사고 방식 확장
+    - BART 위에 추가적인 transformer layer를 쌓음
+        
+        → 외국어를 noising된 영어로 mapping하고 이를 다시 denoising하는데 사용함으로써 BART가 강력한 번역모델로 동작하게 함
+    
+</code></pre>
 <hr>
 </div></article></div></div><div class="column column-left is-4-tablet is-4-desktop is-3-widescreen  order-1 is-sticky"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-256x256 mx-auto mb-2"><img class="avatar" src="/img/avatar.png" alt="YUNNIYA"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">YUNNIYA</p><p class="is-size-6 is-block">YUNNI-CODING</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>Hanyang University ERICA</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">포스트</p><a href="/archives"><p class="title">3</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">카테고리</p><a href="/categories"><p class="title">3</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">태그</p><a href="/tags"><p class="title">6</p></a></div></div></nav><div class="level"><a class="level-item button is-warning is-outlined is-rounded" href="https://github.com/yunniya097" target="_blank" rel="noopener">팔로우</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/yunniya097"><i class="fab fa-github"></i></a></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">태그</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/DSP/"><span class="tag">DSP</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/NLP/"><span class="tag">NLP</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/PLM/"><span class="tag">PLM</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Paper-Review/"><span class="tag">Paper Review</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/SED/"><span class="tag">SED</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/statistics/"><span class="tag">statistics</span><span class="tag">1</span></a></div></div></div></div></div><div class="column-right-shadow is-hidden-widescreen is-sticky"></div></div><div class="column column-right is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only order-3 is-sticky"><!--!--><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">카테고리</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/Paper-Review/"><span class="level-start"><span class="level-item">Paper Review</span></span><span class="level-end"><span class="level-item tag">2</span></span></a><ul><li><a class="level is-mobile" href="/categories/Paper-Review/DSP/"><span class="level-start"><span class="level-item">DSP</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Paper-Review/NLP/"><span class="level-start"><span class="level-item">NLP</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li></ul></div></div></div><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">최근 글</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-07-31T06:26:03.000Z">2023-07-31</time></p><p class="title"><a href="/2023/07/31/NLP_BART_Paper/">BART: Denoising Sequence-to-Sequence Pre-training for Natural Language Generation, Translation, and Comprehension 정리</a></p><p class="categories"><a href="/categories/Paper-Review/">Paper Review</a> / <a href="/categories/Paper-Review/NLP/">NLP</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-07-26T05:58:13.000Z">2023-07-26</time></p><p class="title"><a href="/2023/07/26/DSP_SED_Paper/">Sound Event Detection: A Tutorial 논문 정리</a></p><p class="categories"><a href="/categories/Paper-Review/">Paper Review</a> / <a href="/categories/Paper-Review/DSP/">DSP</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-07-23T12:58:13.000Z">2023-07-23</time></p><p class="title"><a href="/2023/07/23/Statistics_Expectation/">Expectation</a></p></div></article></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">아카이브</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2023/07/"><span class="level-start"><span class="level-item">7월 2023</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li></ul></div></div></div></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/logo.svg" alt="YUNNI-CODING" height="28"></a><p class="is-size-7"><span>&copy; 2023 Yunniya</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p><p class="is-size-7">© 2019</p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("ko");</script><script>var IcarusThemeSettings = {
             article: {
